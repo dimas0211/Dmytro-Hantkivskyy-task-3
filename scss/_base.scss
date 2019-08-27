@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.margin-for-innercontainer {
+  @include margin-for-section-mobile
+}
+
+.general-wrapper {
+  margin: auto;
+  color: $main-font-color;
+  font-family: $main-font;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+
+  .btn {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 3px;
+    background-color: $button-bg-color;
+    color: $white;
+    font-size: 1rem;
+    outline: none;
+    font-family: $main-font;
+    text-transform: uppercase;
+    letter-spacing: 0.64px;
+  }
+
+  .input {
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid $white;
+
+    &::placeholder {
+      padding-left: 10px;
+      font-family: $main-font;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.64px;
+    }
+  }
+
+  .red-title {
+    margin: 10px 0;
+    color: $button-bg-color;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+  }
+
+  .title {
+    margin: 15px 0;
+  }
+
+  .logo {
+    width: 30px;
+    margin: 10px;
+  }
+
+  .link {
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &-logo,
+    &-heading,
+    &-par {
+      margin: 10px;
+      text-align: center;
+    }
+  }
+}
+
+.header {
+  @include flex-center;
+  height: 400px;
+  width: 100%;
+  background-image: url('../pics/background.png');
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+
+  &-text-container {
+    @include flex-column;
+    justify-content: center;
+    margin: 0 20px;
+
+
+    &-heading {
+      margin: 0 10px 10px 10px;
+      font-weight: 100;
+      text-align: center;
+    }
+
+    &-play-icon {
+      width: 2rem;
+    }
+  }
+}
+
+.first-block {
+  position: relative;
+  z-index: 1;
+  height: 645px;
+
+  &-greybg {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  &-red-triangle {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+  }
+
+  &-left {
+    &-par {
+      font-size: .9rem;
+    }
+  }
+}
+
+.second-block {
+  position: relative;
+  overflow: hidden;
+  background-color: $first-bg-color;
+
+  .pen-holder {
+    position: absolute;
+    left: 20px;
+    width: 7rem;
+  }
+
+  .earphones {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 7rem;
+  }
+
+  .cup {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    width: 7rem;
+  }
+
+  &-container {
+    @include flex-column;
+    padding-top: 5rem;
+    text-align: center;
+
+    &-smallerbox {
+      @include flex-column;
+      justify-content: center;
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+.third-block {
+  position: relative;
+  @include flex-column;
+  overflow: hidden;
+  height: 550px;
+
+  &-red-triangle {
+    position: absolute;
+    z-index: -1;
+    top: -200px;
+    left: -1050px;
+  }
+
+  &-leftcontainer {
+    &-macbook {
+      align-self: center;
+      margin: 30px;
+      margin-bottom: 0;
+      width: 280px;
+    }
+  }
+}
+
+.fourth-block {
+  height: 100%;
+  width: 100%;
+  background: url('../pics/dark-bg.png') no-repeat;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+
+  &-top-card {
+    @include flex-column;
+    color: $white;
+
+    &-name {
+      font-size: .9rem;
+      @include margin-for-element;
+    }
+
+    &-cofounder {
+      font-size: .7rem;
+      color: $button-bg-color;
+    }
+
+    &-par {
+      @include margin-for-element;
+      font-weight: 400;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+
+  &-bottom {
+    @include flex-space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    filter: hue-rotate(90deg) sepia(1) brightness(10);
+
+    &-partner {
+      margin: 10px;
+    }
+  }
+}
+
+.fifth-block {
+  text-align: center;
+  background-color: $first-bg-color;
+
+  &-container-window {
+    align-self: center;
+    width: 70%;
+  }
+}
+
+.sixth-block {
+  text-align: center;
+  padding-bottom: 50px;
+  background-color: $purple;
+
+  &-container-sectheading,
+  &-container-footer {
+    color: $white;
+  }
+
+  &-container-confirmation {
+    @include flex-column;
+
+    &-input {
+      background-color: $color-input-font;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+
+  .arrow-container {
+    @include flex-column;
+
+    &-message {
+      font-size: 12px;
+      color: $white;
+    }
+
+    &-arrow {
+      position: relative;
+      bottom: 40px;
+      left: -70px;
+      top: 30px;
+      width: 35px;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+
+  &-rectangle {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: -1350px;
+  }
+
+  &-container {
+    @include flex-column;
+    margin-bottom: 30px;
+
+    &-fourth-social {
+      @include flex-space-around;
+      margin-top: 10px;
+    }
+  }
+
+  &-container-first,
+  &-container-second,
+  &-container-third,
+  &-container-fourth {
+    width: 263px;
+    text-align: center;
+    letter-spacing: 0.56px;
+
+    &-par {
+      font-size: 0.8rem;
+    }
+  }
+
+  &-container-fourth-sender {
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid $color-input-border;
+    background-color: $button-bg-color;
+    outline: none;
+
+    &-icon {
+      width: 13px;
+      margin: 5px;
+    }
+  }
+
+  .container-sender {
+    display: flex;
+
+    &-input {
+      margin: 0;
+      padding: 0;
+      border-radius: 3px;
+      border: 1px solid $color-input-border;
+    }
+
+    &-btn {
+      width: 65px;
+      outline: none;
+      background-color: $button-bg-color;
+    }
+  }
+}

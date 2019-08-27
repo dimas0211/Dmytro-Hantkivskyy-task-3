@@ -1,0 +1,52 @@
+@mixin margin-for-section-mobile {
+  margin: 0 30px;
+  padding-top: 30px;
+}
+
+@mixin margin-for-section-480 {
+  margin: 0 60px;
+  padding-top: 60px;
+}
+
+@mixin margin-for-section-678 {
+  margin: 0 90px;
+  padding: 60px 0;
+}
+
+@mixin margin-for-section-1024 {
+  margin: 0 170px;
+  padding: 90px 0;
+}
+
+@mixin margin-for-element {
+  margin: 10px;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

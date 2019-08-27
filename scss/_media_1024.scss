@@ -1,0 +1,189 @@
+@media (min-width: 1024px) {
+  .margin-for-innercontainer {
+    @include margin-for-section-1024;
+  }
+
+  .general-wrapper {
+    .title {
+      margin: 40px 0;
+      font-size: 2rem;
+    }
+
+    .logo {
+      margin: 15px;
+      width: 65px;
+    }
+
+    .box {
+
+      &-logo,
+      &-heading,
+      &-par {
+        margin: 20px;
+      }
+    }
+  }
+
+  .header {
+    @include flex-center;
+    height: 813px;
+
+    &-text-container {
+      margin: auto 300px;
+      padding: 0;
+
+      &-heading {
+        margin: 15px;
+        font-size: 50px;
+      }
+
+      &-play-icon {
+        width: 4rem;
+      }
+    }
+  }
+
+
+  .first-block {
+    position: relative;
+    z-index: 1;
+    height: 645px;
+
+    &-greybg {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+
+    &-red-triangle {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      right: 0;
+    }
+
+    &-left {
+      margin: 0 600px 0 150px;
+      padding: 70px 0;
+
+      &-par {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .second-block {
+    .pen-holder {
+      left: 100px;
+      width: 10rem;
+    }
+
+    .earphones {
+      right: 100px;
+      width: 10rem;
+    }
+
+    .cup {
+      right: 100px;
+      width: 10rem;
+    }
+
+    &-container-smallerbox {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .third-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 550px;
+
+    &-leftcontainer {
+      &-macbook {
+        margin: 100px;
+        margin-right: 20px;
+        width: 500px;
+      }
+    }
+
+    &-rightcontainer {
+      margin-left: 20px;
+    }
+  }
+
+  .fourth-block {
+    &-top {
+      @include flex-space-between;
+      padding-bottom: 0;
+    }
+
+    &-top-card {
+      @include flex-column;
+      margin: 0 25px;
+      color: $white;
+
+      &-name {
+        font-size: 1.5rem;
+      }
+
+      &-cofounder {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .sixth-block {
+    &-container-confirmation {
+      @include flex-space-between;
+      flex-direction: row;
+    }
+
+    .arrow-container {
+      margin-top: -40px;
+    }
+  }
+
+  .footer {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+
+    &-rectangle {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      right: -910px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 90px 150px 90px 130px;
+      width: 75%;
+      padding: 0;
+
+      &-first,
+      &-second,
+      &-third,
+      &-fourth {
+        margin: 0 50px 0 0;
+      }
+
+      &-fourth-social {
+        @include flex-space-around;
+        margin-top: 10px;
+      }
+    }
+
+    &-container-fourth-sender {
+      position: relative;
+      top: 0;
+    }
+  }
+}
